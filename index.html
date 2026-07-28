@@ -216,40 +216,35 @@
     margin-top:22px;font-size:0.88rem;color:var(--grey);font-style:italic;
   }
 
-  /* ---------- Chalkboard menu ---------- */
-  .chalkboard{
+  /* ---------- Menu ---------- */
+  .menu-banner{
     background:var(--charcoal);
     color:var(--cream);
-    padding:52px 44px;
-    position:relative;
-    border:10px solid #3a332f;
+    padding:26px 32px;
+    text-align:center;
+    margin-bottom:44px;
   }
-  @media (max-width:640px){.chalkboard{padding:36px 24px;}}
-  .chalkboard::before{
-    content:"MENU — COMING SOON";
-    position:absolute;top:-15px;left:36px;
-    background:var(--wheat);color:var(--wine-deep);
-    font-family:'Figtree',sans-serif;font-weight:800;font-size:0.68rem;
-    letter-spacing:0.1em;
-    padding:5px 12px;
+  .menu-banner p{margin:0;font-size:0.95rem;color:#d9cfc4;}
+  .menu-banner b{color:var(--wheat);}
+  .menu-price-note{
+    background:var(--wine);
+    color:var(--cream);
+    padding:16px 22px;
+    text-align:center;
+    font-size:0.9rem;
+    margin-bottom:44px;
   }
-  .chalk-title{
-    font-family:'Caveat',cursive;font-weight:700;
-    font-size:2.6rem;color:var(--wheat);
-    text-align:center;margin-bottom:6px;
-  }
-  .chalk-sub{
-    text-align:center;color:#c9beb2;font-size:0.95rem;margin-bottom:36px;
-  }
-  .chalk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
-  @media (max-width:880px){.chalk-grid{grid-template-columns:repeat(2,1fr);}}
-  @media (max-width:520px){.chalk-grid{grid-template-columns:1fr;}}
-  .chalk-cat{text-align:center;padding:18px 12px;border:1px dashed rgba(251,243,231,0.25);}
-  .chalk-cat .script{font-size:1.5rem;color:var(--wheat);display:block;margin-bottom:8px;}
-  .chalk-cat p{font-size:0.86rem;color:#c9beb2;margin:0;}
-  .chalk-note{
-    text-align:center;margin-top:34px;font-size:0.86rem;color:#a89d90;font-style:italic;
-  }
+  .menu-groups{display:grid;grid-template-columns:1fr 1fr;gap:34px;}
+  @media (max-width:880px){.menu-groups{grid-template-columns:1fr;}}
+  .menu-cat{background:var(--white);border-top:4px solid var(--wine);padding:28px 30px;}
+  .menu-cat h3{font-size:1.5rem;margin-bottom:4px;}
+  .menu-cat .cat-note{font-size:0.84rem;color:var(--grey);margin-bottom:18px;font-style:italic;}
+  .menu-items{list-style:none;padding:0;margin:0;}
+  .menu-items li{padding:10px 0;border-bottom:1px solid var(--cream-deep);}
+  .menu-items li:last-child{border-bottom:none;}
+  .menu-items li b{font-weight:700;display:block;font-size:0.98rem;}
+  .menu-items li span{font-size:0.86rem;color:var(--grey);}
+  .menu-full-width{grid-column:1 / -1;}
 
   /* ---------- The Space ---------- */
   .space-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;}
@@ -373,30 +368,137 @@
   <div class="wrap">
     <span class="kicker">On the menu</span>
     <h2 class="section-heading reveal">What we're known for</h2>
-    <p class="section-sub reveal">The full menu is being pulled together — here's the shape of what's on it.</p>
+    <p class="section-sub reveal">Homemade Italian food and brick-oven pizza — the full lineup.</p>
 
-    <div class="chalkboard reveal" style="margin-top:40px;">
-      <div class="chalk-title">Tonight's Board</div>
-      <p class="chalk-sub">A taste of what's on the menu — full details coming soon</p>
-      <div class="chalk-grid">
-        <div class="chalk-cat">
-          <span class="script">Pizza</span>
-          <p>Hand-stretched, by the cut or the sheet</p>
-        </div>
-        <div class="chalk-cat">
-          <span class="script">Wings &amp; Fried</span>
-          <p>Bone-in, boneless, and fried chicken dinners</p>
-        </div>
-        <div class="chalk-cat">
-          <span class="script">Pasta &amp; Dinners</span>
-          <p>Homemade Italian classics</p>
-        </div>
-        <div class="chalk-cat">
-          <span class="script">Subs &amp; Apps</span>
-          <p>Stuffed subs, fried sides, starters</p>
-        </div>
+    <div class="menu-banner reveal" style="margin-top:40px;">
+      <p>All food is <b>homemade to order</b> and pizzas are cooked in a <b>brick oven</b> — please allow extra time.</p>
+    </div>
+
+    <div class="menu-price-note reveal">
+      Prices aren't listed here since they change — call (330) 928-1530 for current pricing.
+    </div>
+
+    <div class="menu-groups reveal">
+
+      <div class="menu-cat">
+        <h3>Appetizers</h3>
+        <ul class="menu-items">
+          <li><b>Fried Mushrooms</b><span>1/4 pound</span></li>
+          <li><b>Cheddar Jalapeño Poppers</b></li>
+          <li><b>Mussels Marinara</b><span>13 mussels</span></li>
+          <li><b>Garlic Cheese Fries</b></li>
+          <li><b>Mozzarella Sticks</b><span>5 pieces</span></li>
+          <li><b>Meatball Appetizer</b><span>2 meatballs</span></li>
+          <li><b>Hot Stuffed Banana Peppers</b><span>2 peppers</span></li>
+          <li><b>Chicken Fingers</b><span>5 pieces</span></li>
+          <li><b>Sauerkraut Balls</b><span>6 or 12</span></li>
+          <li><b>Calamari Rings</b></li>
+          <li><b>Garlic Toast</b><span>plain or with cheese</span></li>
+          <li><b>Fried Zucchini</b></li>
+          <li><b>Jill Stix</b><span>Tim's version of cheesy bread</span></li>
+          <li><b>Jojos</b><span>6 pieces</span></li>
+          <li><b>Onion Rings</b><span>9 pieces</span></li>
+          <li><b>French Fries</b></li>
+          <li><b>Baked Chicken Ala Scott</b><span>5 chicken fingers tossed in hot garlic sauce, baked with cheese</span></li>
+        </ul>
       </div>
-      <p class="chalk-note">Full menu with pricing coming soon — call for today's specials.</p>
+
+      <div class="menu-cat">
+        <h3>Soups &amp; Salads</h3>
+        <p class="cat-note">Dressings: homemade Italian, ranch, French, oil &amp; vinegar, honey mustard</p>
+        <ul class="menu-items">
+          <li><b>Homemade Italian Wedding Soup</b><span>Meatballs, shredded chicken, escarole, carrots, onions, chicken broth — cup or bowl</span></li>
+          <li><b>House Salad</b><span>Lettuce, spinach, tomato, pepperoncini, mozzarella — small or large</span></li>
+          <li><b>Antipasto Salad</b><span>Pepperoni, salami, ham, capicola, lettuce, spinach, green pepper, black olive, pepperoncini, tomato, mushroom, mozzarella</span></li>
+          <li><b>Chicken Salad</b><span>Lightly breaded chicken breast, lettuce, spinach, tomato, pepperoncini, mozzarella</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Award-Winning Wings</h3>
+        <p class="cat-note">Served with ranch or blue cheese &amp; celery</p>
+        <ul class="menu-items">
+          <li><b>Bone-In Wings</b><span>10 pieces</span></li>
+          <li><b>Boneless Wings</b><span>10 pieces</span></li>
+          <li><b>Wing Zings</b><span>10 pieces, breaded bone-in wings with a spicy breading</span></li>
+          <li><b>Flavors</b><span>Mild, medium, hot, BBQ, BBQ hot, garlic, hot garlic, teriyaki garlic, hot garlic teriyaki, honey mustard, garlic parmesan, house dry rub, or mix any combination</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Traditional Pizza</h3>
+        <p class="cat-note">4-cut, 8-cut, or 16-cut — gluten-free or cauliflower crust available</p>
+        <ul class="menu-items">
+          <li><b>Toppings</b><span>Italian sausage, pepperoni, meatballs, ham, bacon, banana peppers, onions, green peppers, tomato, mushrooms, roasted red peppers, pineapple, black olives, green olives, jalapeño, anchovies</span></li>
+          <li><b>Sauces</b><span>Traditional pizza sauce included; white, garlic, ranch, or alfredo available for a small upcharge</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Tim's Specialty Pizzas</h3>
+        <ul class="menu-items">
+          <li><b>Stuffed Banana Pepper</b></li>
+          <li><b>White Sauce, Tomato &amp; Banana Pepper</b></li>
+          <li><b>Ranch Sauce, Bacon &amp; Green Pepper</b></li>
+          <li><b>Hawaiian</b><span>Ham &amp; pineapple</span></li>
+          <li><b>Broccoli &amp; Cauliflower</b></li>
+          <li><b>Deluxe</b><span>Pepperoni, sausage, onion, mushroom, green pepper, black olive</span></li>
+          <li><b>Josh's Chicken Alfredo, Broccoli &amp; Tomato</b><span>8-cut only</span></li>
+          <li><b>Mike's Hot Chicken Pie</b><span>Hot garlic sauce, cheese, chicken cutlet — 8-cut only</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Pasta</h3>
+        <p class="cat-note">All pasta includes fresh bread &amp; house salad</p>
+        <ul class="menu-items">
+          <li><b>Spaghetti</b><span>Marinara</span></li>
+          <li><b>Rigatoni</b><span>Marinara</span></li>
+          <li><b>Cavatelli</b><span>Marinara</span></li>
+          <li><b>Lasagna</b><span>Layered pasta, meat sauce, mozzarella — when available</span></li>
+          <li><b>Meat or Cheese Ravioli</b><span>7 pieces, marinara</span></li>
+          <li><b>Chicken Fettuccini Alfredo</b><span>Lightly breaded chicken breast, fettuccini, parmesan cream, parsley</span></li>
+          <li><b>Chicken Parmesan</b><span>Lightly breaded chicken breast, mozzarella, marinara, spaghetti</span></li>
+          <li><b>Veggie Pasta</b><span>Onion, green pepper, mushroom, banana pepper, garlic sauce, spaghetti, parmesan</span></li>
+          <li><b>Chicken Cutlet</b><span>Lightly breaded chicken breast, marinara, spaghetti</span></li>
+          <li><b>Mussels Marinara</b><span>13 mussels, marinara, spaghetti, parmesan</span></li>
+          <li><b>Eggplant Parmesan</b><span>Breaded eggplant, marinara, mozzarella, spaghetti</span></li>
+          <li><b>Chucks Meatball Casserole</b><span>Four homemade meatballs, marinara, provolone, mozzarella</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-cat">
+        <h3>Fried Chicken</h3>
+        <p class="cat-note">Dinners include jojos, coleslaw &amp; bread</p>
+        <ul class="menu-items">
+          <li><b>4, 8, or 12 Piece</b><span>All-white meat available</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-cat">
+        <h3>House Made Subs</h3>
+        <ul class="menu-items">
+          <li><b>Roast Beef</b><span>Slow-cooked beef, house au jus, mozzarella</span></li>
+          <li><b>Chicken Parmesan</b><span>Breaded chicken breast, marinara, mozzarella</span></li>
+          <li><b>Veggie</b><span>Onion, green pepper, black olive, banana pepper, lettuce, mushroom, tomato, mozzarella, Italian dressing</span></li>
+          <li><b>Meatball</b><span>3 meatballs, marinara, mozzarella</span></li>
+          <li><b>Classic Italian</b><span>Ham, salami, capicola, pepperoni, mozzarella, tomato, onion, lettuce, Italian dressing — hot or cold</span></li>
+          <li><b>Italian Sausage</b><span>Mild sausage patty, tomato sauce, mozzarella</span></li>
+          <li><b>Stuffed Pepper</b><span>Sausage-stuffed banana peppers, marinara, mozzarella</span></li>
+          <li><b>Chicken Cutlet</b><span>Lightly breaded chicken breast, lettuce, tomato, mayonnaise</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-cat menu-full-width">
+        <h3>More on the Menu</h3>
+        <ul class="menu-items">
+          <li><b>3 Piece Fried Cod</b><span>Includes fries &amp; coleslaw</span></li>
+          <li><b>Kids Meals</b><span>Spaghetti &amp; meatball, cavatelli &amp; meatball, or three chicken fingers &amp; fries</span></li>
+          <li><b>Dessert</b><span>Cannoli, plus daily dessert specials — ask your server</span></li>
+          <li><b>Catering &amp; Parties</b><span>Sheet pizza, fried chicken, jojos, rigatoni, and party Italian subs available for catering (24-hour notice). Free party room available — ask your server for details.</span></li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
