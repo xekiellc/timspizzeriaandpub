@@ -180,19 +180,8 @@
   .btn-secondary:hover{border-color:var(--cream);}
 
   /* ---------- About ---------- */
-  .about-wrap{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:start;}
-  @media (max-width:880px){.about-wrap{grid-template-columns:1fr;}}
-  .about-copy p{font-size:1.08rem;max-width:600px;margin:0 0 16px;}
+  .about-copy p{font-size:1.08rem;max-width:640px;margin:0 0 16px;}
   .about-note{font-size:0.9rem;color:var(--grey);}
-  .fact-card{
-    background:var(--white);
-    border:1px solid rgba(38,34,32,0.1);
-    padding:28px 26px;
-  }
-  .fact-card .kicker{margin-bottom:16px;}
-  .fact-row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--cream-deep);font-size:0.95rem;}
-  .fact-row:last-child{border-bottom:none;}
-  .fact-row b{font-family:'Fraunces',serif;font-weight:600;color:var(--wine);}
 
   /* ---------- Specials ---------- */
   .specials-card{
@@ -228,7 +217,7 @@
   }
 
   /* ---------- Menu ---------- */
-  .menu-groups{display:grid;grid-template-columns:1fr 1fr;gap:34px;}
+  .menu-groups{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;}
   @media (max-width:880px){.menu-groups{grid-template-columns:1fr;}}
   .menu-cat{background:var(--white);border-top:4px solid var(--wine);padding:28px 30px;}
   .menu-cat h3{font-size:1.5rem;margin-bottom:4px;}
@@ -331,19 +320,9 @@
   <div class="wrap">
     <span class="kicker">Who we are</span>
     <h2 class="section-heading reveal">Family-owned, neighborhood-run</h2>
-    <div class="about-wrap" style="margin-top:40px;">
-      <div class="about-copy reveal">
-        <p>Tim's Pizzeria &amp; Pub opened in May 2011, started by Tim Carrabine after decades of experience in the pizza business going back to his youth. It's stayed what it started as — a relaxed, sit-down corner spot in a residential part of Cuyahoga Falls, the kind of place where the bar's full, the pizza's stretched fresh, and the party room fills up on a Friday.</p>
-        <p class="about-note">Full bar, party room, and back patio on site.</p>
-      </div>
-      <div class="fact-card reveal">
-        <span class="kicker">At a glance</span>
-        <div class="fact-row"><span>Open since</span><b>2011</b></div>
-        <div class="fact-row"><span>Style</span><b>Pizza &amp; Italian pub</b></div>
-        <div class="fact-row"><span>Price range</span><b>$10–20 / person</b></div>
-        <div class="fact-row"><span>Reservations</span><b>Not accepted</b></div>
-        <div class="fact-row"><span>Delivery</span><b>Not offered</b></div>
-      </div>
+    <div class="about-copy reveal" style="margin-top:40px;">
+      <p>Tim's Pizzeria &amp; Pub opened in May 2011, started by Tim Carrabine after decades of experience in the pizza business going back to his youth. It's stayed what it started as — a relaxed, sit-down corner spot in a residential part of Cuyahoga Falls, the kind of place where the bar's full, the pizza's stretched fresh, and the party room fills up on a Friday.</p>
+      <p class="about-note">Full bar, party room, and back patio on site. $10–20 per person, dine-in only — no delivery.</p>
     </div>
   </div>
 </section>
