@@ -42,7 +42,7 @@
     --maxw:1160px;
   }
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;scroll-padding-top:90px;}
   body{
     margin:0;
     background:var(--cream);
@@ -182,6 +182,45 @@
   /* ---------- About ---------- */
   .about-copy p{font-size:1.08rem;max-width:640px;margin:0 0 16px;}
   .about-note{font-size:0.9rem;color:var(--grey);}
+
+  /* ---------- Food Gallery ---------- */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px;}
+  @media (max-width:880px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+  .gallery-item{position:relative;overflow:hidden;background:var(--charcoal);}
+  .gallery-item img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;display:block;transition:transform 0.3s ease;}
+  .gallery-item:hover img{transform:scale(1.04);}
+  .gallery-cap{
+    position:absolute;bottom:0;left:0;right:0;
+    background:linear-gradient(to top, rgba(26,20,20,0.88), transparent);
+    color:var(--cream);
+    font-family:'Figtree',sans-serif;font-weight:700;font-size:0.86rem;
+    letter-spacing:0.04em;text-transform:uppercase;
+    padding:26px 14px 12px;
+  }
+
+  /* ---------- Testimonials ---------- */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;}
+  @media (max-width:880px){.testi-grid{grid-template-columns:1fr;}}
+  .testi-card{background:var(--white);padding:28px;border-left:5px solid var(--wine);}
+  .testi-card .mark{font-family:Georgia,serif;font-size:2.6rem;color:var(--wine);line-height:0.5;display:block;margin-bottom:10px;}
+  .testi-card p{font-size:0.98rem;margin:0 0 14px;color:var(--charcoal);}
+  .testi-card .who{font-weight:800;font-size:0.8rem;color:var(--grey);text-transform:uppercase;letter-spacing:0.04em;}
+
+  /* ---------- Menu quick-jump nav ---------- */
+  .menu-jump{
+    display:flex;flex-wrap:wrap;gap:10px;
+    margin-top:28px;padding-bottom:28px;
+    border-bottom:1px solid rgba(38,34,32,0.12);
+  }
+  .menu-jump a{
+    font-family:'Figtree',sans-serif;font-weight:700;font-size:0.82rem;
+    color:var(--wine);background:var(--white);
+    border:1.5px solid var(--wine);
+    padding:8px 16px;border-radius:20px;
+    text-decoration:none;white-space:nowrap;
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .menu-jump a:hover{background:var(--wine);color:var(--cream);}
 
   /* ---------- Specials ---------- */
   .specials-card{
@@ -328,13 +367,75 @@
   </div>
 </section>
 
+<section class="section" style="background:var(--cream-deep);">
+  <div class="wrap">
+    <span class="kicker">From our kitchen</span>
+    <h2 class="section-heading reveal">Made fresh, every day</h2>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item">
+        <img src="photos/pizza.jpg" alt="Tim's Pizzeria &amp; Pub sheet pizza with pepperoni and sausage">
+        <span class="gallery-cap">Pizza</span>
+      </div>
+      <div class="gallery-item">
+        <img src="photos/wings.jpg" alt="Award-winning wings from Tim's Pizzeria &amp; Pub">
+        <span class="gallery-cap">Wings</span>
+      </div>
+      <div class="gallery-item">
+        <img src="photos/pasta.jpg" alt="Spaghetti and homemade meatballs from Tim's Pizzeria &amp; Pub">
+        <span class="gallery-cap">Pasta</span>
+      </div>
+      <div class="gallery-item">
+        <img src="photos/bread.jpg" alt="Fresh baked bread from Tim's Pizzeria &amp; Pub">
+        <span class="gallery-cap">Fresh Bread</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="kicker">What people say</span>
+    <h2 class="section-heading reveal">Real reviews</h2>
+    <div class="testi-grid reveal">
+      <div class="testi-card">
+        <span class="mark">&ldquo;</span>
+        <p>The best pizza I have ever had!</p>
+        <div class="who">Laurie Friedrich, Facebook review</div>
+      </div>
+      <div class="testi-card">
+        <span class="mark">&ldquo;</span>
+        <p>The food and service was outstanding! The wings were tender and the sauces were very delicious! The pizza was delicious also. My compliments to your cooking staff.</p>
+        <div class="who">Michael Berger, Facebook review</div>
+      </div>
+      <div class="testi-card">
+        <span class="mark">&ldquo;</span>
+        <p>We love Tim's for a fun night out with our kids! They are so family friendly and make it a point to ensure we are comfortable and feel welcome with our kiddos.</p>
+        <div class="who">Amy Latchic, Facebook review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="menu" style="background:var(--cream-deep);">
   <div class="wrap">
     <h2 class="section-heading reveal">Menu</h2>
     <p class="section-sub reveal">Full bar, party room, and back patio on site. $10–20 per person, dine-in only — no delivery.</p>
+    <nav class="menu-jump reveal">
+      <a href="#apps">Appetizers</a>
+      <a href="#soups">Soups &amp; Salads</a>
+      <a href="#wings">Wings</a>
+      <a href="#trad-pizza">Traditional Pizza</a>
+      <a href="#specialty-pizza">Specialty Pizzas</a>
+      <a href="#pasta">Pasta</a>
+      <a href="#chicken-fish">Fried Chicken &amp; Fish</a>
+      <a href="#subs">Subs</a>
+      <a href="#kids">Kids Meals</a>
+      <a href="#desserts">Desserts</a>
+      <a href="#catering">Catering</a>
+    </nav>
     <div class="menu-groups reveal" style="margin-top:44px;">
 
-      <div class="menu-cat">
+      <div class="menu-cat" id="apps">
         <h3>Appetizers</h3>
         <ul class="menu-items">
           <li><b>Fried Mushrooms</b><span>1/4 pound</span></li>
@@ -357,7 +458,7 @@
         </ul>
       </div>
 
-      <div class="menu-cat">
+      <div class="menu-cat" id="soups">
         <h3>Soups &amp; Salads</h3>
         <p class="cat-note">Dressings: homemade Italian, ranch, French, oil &amp; vinegar, honey mustard</p>
         <ul class="menu-items">
@@ -368,7 +469,7 @@
         </ul>
       </div>
 
-      <div class="menu-cat">
+      <div class="menu-cat" id="wings">
         <h3>Award-Winning Wings</h3>
         <p class="cat-note">Served with ranch or blue cheese &amp; celery</p>
         <ul class="menu-items">
@@ -379,7 +480,7 @@
         </ul>
       </div>
 
-      <div class="menu-cat">
+      <div class="menu-cat" id="trad-pizza">
         <h3>Tim's Traditional Pizza</h3>
         <p class="cat-note">Please allow extra time as all of our food is homemade to order, and our pizzas are cooked in a brick oven. Available 4-cut, 8-cut, or 16-cut — gluten-free or cauliflower crust available.</p>
         <ul class="menu-items">
@@ -388,7 +489,7 @@
         </ul>
       </div>
 
-      <div class="menu-cat">
+      <div class="menu-cat" id="specialty-pizza">
         <h3>Tim's Specialty Pizzas</h3>
         <ul class="menu-items">
           <li><b>Stuffed Banana Pepper</b></li>
@@ -402,7 +503,7 @@
         </ul>
       </div>
 
-      <div class="menu-cat">
+      <div class="menu-cat" id="pasta">
         <h3>Pasta</h3>
         <p class="cat-note">All pasta includes fresh bread &amp; house salad. Dressings: homemade Italian, ranch, French, blue cheese, oil &amp; vinegar, honey mustard.</p>
         <ul class="menu-items">
@@ -421,7 +522,7 @@
         </ul>
       </div>
 
-      <div class="menu-cat">
+      <div class="menu-cat" id="chicken-fish">
         <h3>Fried Chicken &amp; Fish</h3>
         <p class="cat-note">Chicken dinners include jojos, coleslaw &amp; bread</p>
         <ul class="menu-items">
@@ -430,7 +531,7 @@
         </ul>
       </div>
 
-      <div class="menu-cat">
+      <div class="menu-cat" id="subs">
         <h3>House Made Subs</h3>
         <ul class="menu-items">
           <li><b>Roast Beef</b><span>Slow-cooked beef, house au jus, mozzarella</span></li>
@@ -444,7 +545,7 @@
         </ul>
       </div>
 
-      <div class="menu-cat">
+      <div class="menu-cat" id="kids">
         <h3>Kids Meals</h3>
         <ul class="menu-items">
           <li><b>Spaghetti &amp; Meatball</b></li>
@@ -453,7 +554,7 @@
         </ul>
       </div>
 
-      <div class="menu-cat">
+      <div class="menu-cat" id="desserts">
         <h3>Desserts</h3>
         <ul class="menu-items">
           <li><b>Cannoli</b></li>
@@ -461,7 +562,7 @@
         </ul>
       </div>
 
-      <div class="menu-cat menu-full-width">
+      <div class="menu-cat menu-full-width" id="catering">
         <h3>Catering</h3>
         <p class="cat-note">24-hour notice required. Free party room available — ask your server for details.</p>
         <ul class="menu-items">
